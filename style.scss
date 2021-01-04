@@ -1,7 +1,7 @@
-$white: #ffffff;
+$white: #fff;
 $light-gray: #808080;
 $light-gray-2: #a5a5a5;
-$dark-gray: #444444;
+$dark-gray: #444;
 
 body, ul {
   margin: 0;
@@ -16,13 +16,13 @@ ul {
   list-style: none;
 }
 
-header {
+.header {
   height: 56px;
   display: flex;
   justify-content: space-between;
   padding: 0 16px;
 
-  .header__logo {
+  &__logo {
     display: flex;
     align-items: center;
 
@@ -33,7 +33,7 @@ header {
     }
   }
 
-  .header__controls {
+  &__controls {
     display: flex;
     align-items: center;
   }
@@ -44,11 +44,11 @@ header {
   font-size: 16px;
   margin: 0;
 
-  li {
-    a {
+  &__item {
+    &-link {
       padding: 0 16px;
       color: $light-gray;
-      
+
       &:hover {
         color: $dark-gray;
       }
@@ -59,7 +59,7 @@ header {
 .search {
   margin-left: 16px;
 
-  input[type="text"] {
+  &__inner {
     padding: 8px;
     border-radius: 6px;
     border: 1px solid $light-gray-2;
@@ -68,7 +68,7 @@ header {
 }
 
 .homepage {
-  .homepage__banner {
+  &__banner {
     position: relative;
 
     img {
@@ -89,24 +89,24 @@ header {
       left: 16px;
     }
   }
-  
-  .homepage__content {
+
+  &__content {
     margin: 0 auto 32px;
     max-width: 80%;
-    
+
     .tour-list {
       display: flex;
       margin-top: 24px;
-      
-      .tour-item {
+
+      &__item {
         padding: 0 8px;
-   
+
         img {
           width: 100%;
           border-radius: 6px;
         }
-        
-        &__title {
+
+        &-title {
           position: absolute;
           bottom: 0;
           color: $white;
@@ -116,33 +116,33 @@ header {
           width: calc(100% - 16px);
           border-radius: 0 0 6px 6px;
         }
-        
+
         &:hover {
-          .tour-item__title {
+          .tour-list__item-title {
             padding-bottom: 32px;
           }
         }
       }
     }
-    
+
     &--two-col {
       display: flex;
       margin-top: 40px;
 
       .blog {
         padding-left: 8px;
-        
-        .item {
+
+        &__item {
           img {
             max-width: 176px;
             max-height: 176px;
           }
-          
-          &__detail {
+
+          &-detail {
             margin-left: 24px;
           }
-          
-          &__title {
+
+          &-title {
             font-size: 24px;
             margin-bottom: 0.2rem;
           }
@@ -151,111 +151,111 @@ header {
 
       .hiker {
         padding-left: 24px;
-        
-        .item {
+
+        &__item {
           font-size: 14px;
-          
+
           img {
             max-width: 49px;
             max-height: 49px;
           }
-          
-          &__detail {
+
+          &-detail {
             margin-left: 8px;
           }
         }
       }
-      
+
       .item {
         display: flex;
         align-items: center;
         margin-bottom: 24px;
-          
+
         img {
           max-width: 176px;
           border-radius: 6px;
         }
-        
+
         &__detail {
           color: $light-gray-2;
         }
-        
+
         &__title {
           color: #595959;
           font-weight: bold;
           margin-bottom: 0;
         }
-          
+
         &:hover {
           .item__detail, .item__title {
             color: #000000;
           }
         }
       }
-      
-      h2 {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 24px;
-        
-        &:after {
-          content: "";
-          display: block;
-          background: #5C832F;
-          height: 5px;
-          width: 32px;
-        }
-      }
-      
+
       .see-all {
         color: $light-gray;
         font-weight: bold;
         font-size: 20px;
-        
+
         &:hover {
           color: $dark-gray;
         }
       }
-    }  
+    }
+
+    &-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 24px;
+
+      &:after {
+        content: "";
+        display: block;
+        background: #5C832F;
+        height: 5px;
+        width: 32px;
+      }
+    }
   }
 }
 
-footer {
+.footer {
   background-color: #222222;
   padding: 16px;
   color: $white;
-  
-  .footer__logo {
+
+  &__logo {
     img {
       max-width: 200px;
     }
   }
-  
-  .footer__nav {
+
+  &__nav {
     display: flex;
-    
-    li {
+
+    &-item {
       padding: 16px 32px 16px 0;
-      
-      a {
+
+      &-link {
         color: $white;
         font-weight: bold;
-        
+
         &:hover {
           color: $light-gray-2;
         }
       }
     }
   }
-  
-  .footer__info {
+
+  &__info {
     color: $light-gray;
     max-width: 40rem;
     margin-bottom: 16px;
-    
-    a {
+
+    &-link {
       color: $light-gray;
-      
+
       &:hover {
         color: $dark-gray;
       }
