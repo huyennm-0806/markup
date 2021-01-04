@@ -1,0 +1,264 @@
+$white: #ffffff;
+$light-gray: #808080;
+$light-gray-2: #a5a5a5;
+$dark-gray: #444444;
+
+body, ul {
+  margin: 0;
+  padding: 0;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+
+  .header__logo {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      img {
+        width: 200px;
+      }
+    }
+  }
+
+  .header__controls {
+    display: flex;
+    align-items: center;
+  }
+}
+.menu {
+  display: flex;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0;
+
+  li {
+    a {
+      padding: 0 16px;
+      color: $light-gray;
+      
+      &:hover {
+        color: $dark-gray;
+      }
+    }
+  }
+}
+
+.search {
+  margin-left: 16px;
+
+  input[type="text"] {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid $light-gray-2;
+    font-size: 16px;
+  }
+}
+
+.homepage {
+  .homepage__banner {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 460px;
+    }
+
+    .banner-desc {
+      color: $white;
+      font-size: 41px;
+      width: 720px;
+      background-color: rgba(0, 0, 0, 0.5);
+      margin: 0;
+      padding: 16px;
+      border-radius: 6px;
+      position: absolute;
+      top: 48px;
+      left: 16px;
+    }
+  }
+  
+  .homepage__content {
+    margin: 0 auto 32px;
+    max-width: 80%;
+    
+    .tour-list {
+      display: flex;
+      margin-top: 24px;
+      
+      .tour-item {
+        padding: 0 8px;
+   
+        img {
+          width: 100%;
+          border-radius: 6px;
+        }
+        
+        &__title {
+          position: absolute;
+          bottom: 0;
+          color: $white;
+          font-weight: bold;
+          background-color: rgba(0, 0, 0, 0.5);
+          padding: 11px;
+          width: calc(100% - 16px);
+          border-radius: 0 0 6px 6px;
+        }
+        
+        &:hover {
+          .tour-item__title {
+            padding-bottom: 32px;
+          }
+        }
+      }
+    }
+    
+    &--two-col {
+      display: flex;
+      margin-top: 40px;
+
+      .blog {
+        padding-left: 8px;
+        
+        .item {
+          img {
+            max-width: 176px;
+            max-height: 176px;
+          }
+          
+          &__detail {
+            margin-left: 24px;
+          }
+          
+          &__title {
+            font-size: 24px;
+            margin-bottom: 0.2rem;
+          }
+        }
+      }
+
+      .hiker {
+        padding-left: 24px;
+        
+        .item {
+          font-size: 14px;
+          
+          img {
+            max-width: 49px;
+            max-height: 49px;
+          }
+          
+          &__detail {
+            margin-left: 8px;
+          }
+        }
+      }
+      
+      .item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+          
+        img {
+          max-width: 176px;
+          border-radius: 6px;
+        }
+        
+        &__detail {
+          color: $light-gray-2;
+        }
+        
+        &__title {
+          color: #595959;
+          font-weight: bold;
+          margin-bottom: 0;
+        }
+          
+        &:hover {
+          .item__detail, .item__title {
+            color: #000000;
+          }
+        }
+      }
+      
+      h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 24px;
+        
+        &:after {
+          content: "";
+          display: block;
+          background: #5C832F;
+          height: 5px;
+          width: 32px;
+        }
+      }
+      
+      .see-all {
+        color: $light-gray;
+        font-weight: bold;
+        font-size: 20px;
+        
+        &:hover {
+          color: $dark-gray;
+        }
+      }
+    }  
+  }
+}
+
+footer {
+  background-color: #222222;
+  padding: 16px;
+  color: $white;
+  
+  .footer__logo {
+    img {
+      max-width: 200px;
+    }
+  }
+  
+  .footer__nav {
+    display: flex;
+    
+    li {
+      padding: 16px 32px 16px 0;
+      
+      a {
+        color: $white;
+        font-weight: bold;
+        
+        &:hover {
+          color: $light-gray-2;
+        }
+      }
+    }
+  }
+  
+  .footer__info {
+    color: $light-gray;
+    max-width: 40rem;
+    margin-bottom: 16px;
+    
+    a {
+      color: $light-gray;
+      
+      &:hover {
+        color: $dark-gray;
+      }
+    }
+  }
+}
