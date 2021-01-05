@@ -2,6 +2,10 @@ $white: #fff;
 $light-gray: #808080;
 $light-gray-2: #a5a5a5;
 $dark-gray: #444;
+$dark-gray-2: #595959;
+$dark-gray-3: #222;
+$black: #000;
+$green: #5C832F;
 
 body, ul {
   margin: 0;
@@ -26,10 +30,8 @@ ul {
     display: flex;
     align-items: center;
 
-    .logo {
-      img {
-        width: 200px;
-      }
+    img {
+      width: 200px;
     }
   }
 
@@ -38,20 +40,19 @@ ul {
     align-items: center;
   }
 }
+
 .menu {
   display: flex;
   font-weight: bold;
   font-size: 16px;
   margin: 0;
 
-  &__item {
-    &-link {
-      padding: 0 16px;
-      color: $light-gray;
+  &__link {
+    padding: 0 16px;
+    color: $light-gray;
 
-      &:hover {
-        color: $dark-gray;
-      }
+    &:hover {
+      color: $dark-gray;
     }
   }
 }
@@ -79,6 +80,7 @@ ul {
     .banner-desc {
       color: $white;
       font-size: 41px;
+      font-weight: bold;
       width: 720px;
       background-color: rgba(0, 0, 0, 0.5);
       margin: 0;
@@ -93,135 +95,136 @@ ul {
   &__content {
     margin: 0 auto 32px;
     max-width: 80%;
+  }
+}
 
-    .tour-list {
-      display: flex;
-      margin-top: 24px;
+.tour-list {
+  display: flex;
+  margin-top: 24px;
 
-      &__item {
-        padding: 0 8px;
+  &__item {
+    padding: 0 8px;
 
-        img {
-          width: 100%;
-          border-radius: 6px;
-        }
-
-        &-title {
-          position: absolute;
-          bottom: 0;
-          color: $white;
-          font-weight: bold;
-          background-color: rgba(0, 0, 0, 0.5);
-          padding: 11px;
-          width: calc(100% - 16px);
-          border-radius: 0 0 6px 6px;
-        }
-
-        &:hover {
-          .tour-list__item-title {
-            padding-bottom: 32px;
-          }
-        }
-      }
+    img {
+      width: 100%;
+      border-radius: 6px;
     }
 
-    &--two-col {
-      display: flex;
-      margin-top: 40px;
-
-      .blog {
-        padding-left: 8px;
-
-        &__item {
-          img {
-            max-width: 176px;
-            max-height: 176px;
-          }
-
-          &-detail {
-            margin-left: 24px;
-          }
-
-          &-title {
-            font-size: 24px;
-            margin-bottom: 0.2rem;
-          }
-        }
+    &:hover {
+      .tour-list__title {
+        padding-bottom: 32px;
       }
+    }
+  }
 
-      .hiker {
-        padding-left: 24px;
+  &__title {
+    position: absolute;
+    bottom: 0;
+    color: $white;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 11px;
+    width: calc(100% - 16px);
+    border-radius: 0 0 6px 6px;
+  }
+}
 
-        &__item {
-          font-size: 14px;
+.block {
+  &--two-col {
+    display: flex;
+    margin-top: 40px;
+  }
 
-          img {
-            max-width: 49px;
-            max-height: 49px;
-          }
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 24px;
 
-          &-detail {
-            margin-left: 8px;
-          }
-        }
-      }
+    &:after {
+      content: "";
+      display: block;
+      background: $green;
+      height: 5px;
+      width: 32px;
+    }
+  }
 
-      .item {
-        display: flex;
-        align-items: center;
-        margin-bottom: 24px;
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    color: $light-gray-2;
 
-        img {
-          max-width: 176px;
-          border-radius: 6px;
-        }
-
-        &__detail {
-          color: $light-gray-2;
-        }
-
-        &__title {
-          color: #595959;
-          font-weight: bold;
-          margin-bottom: 0;
-        }
-
-        &:hover {
-          .item__detail, .item__title {
-            color: #000000;
-          }
-        }
-      }
-
-      .see-all {
-        color: $light-gray;
-        font-weight: bold;
-        font-size: 20px;
-
-        &:hover {
-          color: $dark-gray;
-        }
-      }
+    img {
+      max-width: 176px;
+      border-radius: 6px;
     }
 
     &-title {
-      font-size: 24px;
+      color: $dark-gray-2;
       font-weight: bold;
-      margin-bottom: 24px;
+      margin-bottom: 0;
+    }
 
-      &:after {
-        content: "";
-        display: block;
-        background: #5C832F;
-        height: 5px;
-        width: 32px;
+    &:hover {
+      color: $black;
+
+      .block__item-title {
+        color: $black;
       }
     }
   }
 }
 
+.blog {
+  padding-left: 8px;
+
+  &__item {
+    img {
+      max-width: 176px;
+      max-height: 176px;
+    }
+
+    &-detail {
+      margin-left: 24px;
+    }
+
+    &-title {
+      font-size: 24px;
+      margin-bottom: 0.2rem;
+    }
+  }
+}
+
+.hiker {
+  padding-left: 24px;
+
+  &__item {
+    font-size: 14px;
+
+    img {
+      max-width: 49px;
+      max-height: 49px;
+    }
+
+    &-detail {
+      margin-left: 8px;
+    }
+  }
+}
+
+.see-all {
+  color: $light-gray;
+  font-weight: bold;
+  font-size: 20px;
+
+  &:hover {
+    color: $dark-gray;
+  }
+}
+
 .footer {
-  background-color: #222222;
+  background-color: $dark-gray-3;
   padding: 16px;
   color: $white;
 
@@ -236,14 +239,14 @@ ul {
 
     &-item {
       padding: 16px 32px 16px 0;
+    }
 
-      &-link {
-        color: $white;
-        font-weight: bold;
+    &-link {
+      color: $white;
+      font-weight: bold;
 
-        &:hover {
-          color: $light-gray-2;
-        }
+      &:hover {
+        color: $light-gray-2;
       }
     }
   }
